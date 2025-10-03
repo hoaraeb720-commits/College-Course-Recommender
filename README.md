@@ -1,3 +1,3 @@
 # College-Course-Recommender
 
-Author: <Ben>
+Author: Ben
