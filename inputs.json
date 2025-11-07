@@ -1,8 +1,38 @@
 [
-    {
-        "Intended Major": "Computer Science",
-        "Scores": 1600,
-        "GPA": 4.0,
-        "Achievement or Awards": "National Merit Scholar"
-    }
+  {
+    "Intended Major": "2",
+    "Scores": "2",
+    "GPA": "2",
+    "Achievement or Awards": "2"
+  },
+  {
+    "Intended Major": "3",
+    "Scores": "3",
+    "GPA": "3",
+    "Achievement or Awards": "3"
+  },
+  {
+    "Intended Major": "Computer Science",
+    "Scores": "1450",
+    "GPA": "3.9",
+    "Achievement or Awards": "DECA Finalist"
+  },
+  {
+    "Intended Major": "",
+    "Scores": "",
+    "GPA": "",
+    "Achievement or Awards": ""
+  },
+  {
+    "Intended Major": "",
+    "Scores": "",
+    "GPA": "",
+    "Achievement or Awards": ""
+  },
+  {
+    "Intended Major": "Computer Science",
+    "Scores": "1450",
+    "GPA": "3.9",
+    "Achievement or Awards": "DECA Finalist"
+  }
 ]

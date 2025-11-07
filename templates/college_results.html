@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>College Match Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            margin: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .inputs {
+            background-color: #f1f5f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .inputs p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .schools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+        }
+
+        .card h3 {
+            color: #2563eb;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            background-color: #e0f2fe;
+            margin: 5px 0;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your College Match Summary</h1>
+
+        <div class="inputs">
+            <h2>Your Inputs</h2>
+            <p><strong>Major:</strong> {{ major }}</p>
+            <p><strong>Scores:</strong> {{ scores }}</p>
+            <p><strong>GPA:</strong> {{ gpa }}</p>
+            <p><strong>Awards:</strong> {{ awards }}</p>
+            <p><strong>Test Type:</strong> {{which_test}}</p>
+        </div>
+
+        <h2>Recommended Schools</h2>
+        <div class="schools">
+            <div class="card">
+                <h3>Target Schools</h3>
+                <ul>
+                    <li>University of Michigan</li>
+                    <li>University of Virginia</li>
+                    <li>Boston University</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Safety Schools</h3>
+                <ul>
+                    <li>Penn State University</li>
+                    <li>University of Delaware</li>
+                    <li>Temple University</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Reach Schools</h3>
+                <ul>
+                    <li>Harvard University</li>
+                    <li>Stanford University</li>
+                    <li>Columbia University</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
