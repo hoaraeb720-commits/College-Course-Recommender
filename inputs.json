@@ -1,8 +1,14 @@
 [
-    {
-        "Intended Major": "Computer Science",
-        "Scores": 1600,
-        "GPA": 4.0,
-        "Achievement or Awards": "National Merit Scholar"
-    }
+  {
+    "Intended Major": "computer science",
+    "Scores": "1600",
+    "GPA": "3.9",
+    "Achievement or Awards": "DECA Finalist"
+  },
+  {
+    "Intended Major": "english",
+    "Scores": "1500",
+    "GPA": "4",
+    "Achievement or Awards": "wrote a book"
+  }
 ]
