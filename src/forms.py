@@ -10,7 +10,7 @@ from wtforms import (
 from wtforms.validators import DataRequired, NumberRange
 import pandas as pd
 
-majors_df = pd.read_csv("MajorList.csv")
+majors_df = pd.read_csv("data/MajorList.csv")
 majors_choice = sorted(majors_df["Major"].tolist())
 
 
