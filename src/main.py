@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request
-from forms import CollegeForm
 import pandas as pd
 
-import extract
-import transform
-import recommender
+import src.extract as extract
+import src.transform as transform
+import src.recommender as recommender
+from src.forms import CollegeForm
 
 
 YEAR = 2023
