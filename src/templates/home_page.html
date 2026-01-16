@@ -140,6 +140,23 @@
       background: #444;
       color: white;
     }
+
+    /* Error message styling */
+    .error-message {
+      color: #dc3545;
+      font-size: 0.85rem;
+      margin-top: -12px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .field-error {
+      border-color: #dc3545 !important;
+    }
+
+    body.dark-mode .error-message {
+      color: #ff6b6b;
+    }
   </style>
 </head>
 
@@ -158,19 +175,34 @@
       {{ form.hidden_tag() }}
 
       <label>{{ form.major.label }}</label>
-      {{ form.major(class_='form-control') }}
+      {{ form.major(class_='form-control' + (' field-error' if form.major.errors else '')) }}
+      {% for error in form.major.errors %}
+      <span class="error-message">{{ error }}</span>
+      {% endfor %}
 
       <label>{{ form.test_scores.label }}</label>
-      {{ form.test_scores(class_='form-control') }}
+      {{ form.test_scores(class_='form-control' + (' field-error' if form.test_scores.errors else '')) }}
+      {% for error in form.test_scores.errors %}
+      <span class="error-message">{{ error }}</span>
+      {% endfor %}
 
       <label>{{ form.scores.label }}</label>
-      {{ form.scores(class_='form-control', type='number') }}
+      {{ form.scores(class_='form-control' + (' field-error' if form.scores.errors else ''), type='number') }}
+      {% for error in form.scores.errors %}
+      <span class="error-message">{{ error }}</span>
+      {% endfor %}
 
       <label>{{ form.gpa.label }}</label>
-      {{ form.gpa(class_='form-control', type='number', step='0.01') }}
+      {{ form.gpa(class_='form-control' + (' field-error' if form.gpa.errors else ''), type='number', step='0.01') }}
+      {% for error in form.gpa.errors %}
+      <span class="error-message">{{ error }}</span>
+      {% endfor %}
 
       <label>{{ form.awards.label }}</label>
-      {{ form.awards(class_='form-control') }}
+      {{ form.awards(class_='form-control' + (' field-error' if form.awards.errors else '')) }}
+      {% for error in form.awards.errors %}
+      <span class="error-message">{{ error }}</span>
+      {% endfor %}
 
       {{ form.submit() }}
     </form>
