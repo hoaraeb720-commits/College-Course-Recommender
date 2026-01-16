@@ -351,13 +351,22 @@
         console.log(arr);
         modalTitle.textContent = arr[19];
 
+        // Helper function to ensure URL has proper protocol
+        function formatUrl(url) {
+          if (!url) return '#';
+          if (url.startsWith('http://') || url.startsWith('https://')) {
+            return url;
+          }
+          return 'https://' + url;
+        }
+
         // show in modal
         let details = `<ul>`;
         details += `<li><strong>Institution Name:</strong> ${arr[19]}</li>`;
         details += `<li><strong>Address:</strong> ${arr[20]}, ${arr[21]}, ${arr[22]} ${arr[23]}</li>`;
-        details += `<li><strong>Website:</strong> <a href="http://${arr[25]}" target="_blank">${arr[25]}</a></li>`;
-        details += `<li><strong>Admin URL:</strong> <a href="http://${arr[26]}" target="_blank">${arr[26]}</a></li>`;
-        details += `<li><strong>Financial Aid URL:</strong> <a href="http://${arr[27]}" target="_blank">${arr[27]}</a></li>`;
+        details += `<li><strong>Website:</strong> <a href="${formatUrl(arr[25])}" target="_blank">${arr[25]}</a></li>`;
+        details += `<li><strong>Admin URL:</strong> <a href="${formatUrl(arr[26])}" target="_blank">${arr[26]}</a></li>`;
+        details += `<li><strong>Financial Aid URL:</strong> <a href="${formatUrl(arr[27])}" target="_blank">${arr[27]}</a></li>`;
         details += `</ul>`;
         modalBody.innerHTML = details;
 
